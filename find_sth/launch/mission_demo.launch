@@ -1,0 +1,6 @@
+<launch>
+    <node name="soundplay" pkg="sound_play" type="soundplay_node.py" />
+    <node name="take_photo" pkg="rchomeedu_vision" type="take_photo_sub.py" />
+    <node name="chassis_control" pkg="find_sth" type="chassis_control.py" />
+    <node name="mission_demo" pkg="find_sth" type="mission_demo.py" output="screen" />
+</launch>
