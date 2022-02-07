@@ -37,27 +37,27 @@ def cmd_vel_callback(msg):
     global enable_
     if msg.data.find("whirl") > -1:
         twist.linear.x = 0
-    	twist.linear.y = 0
-    	twist.linear.z = 0
-    	twist.angular.x = 0
-    	twist.angular.y = 0
-    	twist.angular.z = 0.2
+        twist.linear.y = 0
+        twist.linear.z = 0
+        twist.angular.x = 0
+        twist.angular.y = 0
+        twist.angular.z = 0.2
         enable_ = 1
     elif msg.data.find("forward") > -1:
         twist.linear.x = 0.2
-    	twist.linear.y = 0
-    	twist.linear.z = 0
-    	twist.angular.x = 0
-    	twist.angular.y = 0
-    	twist.angular.z = 0
+        twist.linear.y = 0
+        twist.linear.z = 0
+        twist.angular.x = 0
+        twist.angular.y = 0
+        twist.angular.z = 0
         enable_ = 1
     else:
         twist.linear.x = 0
-    	twist.linear.y = 0
-    	twist.linear.z = 0
-    	twist.angular.x = 0
-    	twist.angular.y = 0
-    	twist.angular.z = 0
+        twist.linear.y = 0
+        twist.linear.z = 0
+        twist.angular.x = 0
+        twist.angular.y = 0
+        twist.angular.z = 0
         enable_ = 0
 
 if __name__ == "__main__":
