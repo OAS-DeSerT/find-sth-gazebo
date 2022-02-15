@@ -1,17 +1,17 @@
 <launch>
   <!-- 启动底盘 -->
-  <include file="$(find jupiterobot_bringup)/launch/jupiterobot_bringup.launch" />
+  <include file="$(find jupiterobot_bringup)/launch/jupiterobot_bringup.launch"/>
 
   <!-- 启动double astra -->
-  <include file="$(find rchomeedu_vision)/launch/multi_astra.launch" />
+  <include file="$(find rchomeedu_vision)/launch/multi_astra.launch"/>
 
   <!-- 加载地图 -->
-  <arg name="map_file" default="/home/mustar/catkin_ws/maps/test0.yaml" /> 
-  <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)" />
-    
+  <arg name="map_file" default="/home/mustar/catkin_ws/maps/test0.yaml"/>
+  <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)"/>
+
   <!-- 设置amcl-->
   <arg name="initial_pose_x" default="0.0"/> <!-- 设置初始坐标 -->
-  <arg name="initial_pose_y" default="0.0"/> 
+  <arg name="initial_pose_y" default="0.0"/>
   <arg name="initial_pose_a" default="0.0"/>
 
   <include file="$(find jupiterobot_navigation)/launch/includes/amcl/amcl.launch.xml">
@@ -24,5 +24,5 @@
   <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
 
   <!-- 3D visualization -->
-  <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch" />
+  <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"/>
 </launch>
