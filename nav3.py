@@ -29,7 +29,7 @@ class NavToPoint:
         #initial_pose = PoseWithCovarianceStamped()
         #rospy.Subscriber('initialpose', PoseWithCovarianceStamped, self.update_initial_pose)
         quaternion = quaternion_from_euler(0.0, 0.0, 0.0)
-        self.origin = Pose(Point(0, 0, 0), Quaternion(quaternion[0], quaternion[1], quaternion[2], quaternion[3]))	
+        self.origin = Pose(Point(0, 0, 0), Quaternion(quaternion[0], quaternion[1], quaternion[2], quaternion[3]))
         # Get the initial pose from the user
         #rospy.loginfo("*** Click the 2D Pose Estimate button in RViz to set the robot's initial pose...")
         #rospy.wait_for_message('initialpose', PoseWithCovarianceStamped)
@@ -80,7 +80,7 @@ class NavToPoint:
             original = 1
 
     def cleanup(self):
-        rospy.loginfo("Shutting down navigation	....")
+        rospy.loginfo("Shutting down navigation....")
         self.move_base.cancel_goal()
 
 if __name__=="__main__":
